@@ -8,9 +8,18 @@
     </h:head>
     <h:body>
         <h:form>
-            <h:inputText  id=rut value="#{usuarioBean.usuario.rut}">
-            <h:message for="rut"/>
-            <h:commandButton value="Guardar" />
+            <h:panelGrid columns="3">
+                <h:outputLabel value="RUT"/>
+                <h:inputText  id="rut" value="#{usuarioBean.usuario.rut}"/>
+                <h:message for="rut"/>
+                <h:outputLabel value="CORREO"/>
+                <h:inputText  id="correo" value="#{usuarioBean.usuario.correo}"/>
+                <h:message for="correo"/>
+                
+                <h:commandButton value="Limpiar" />
+                <h:commandButton value="Guardar" />
+            </h:panelGrid>
+
         </h:form>
     </h:body>
 </html>

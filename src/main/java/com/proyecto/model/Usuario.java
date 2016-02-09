@@ -5,10 +5,13 @@
  */
 package com.proyecto.model;
 
+import com.proyecto.util.CheckRut;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 /**
@@ -22,9 +25,10 @@ public class Usuario {
     @Column(name="id")
     private int id;
     @Column(name="rut")
-    @NotEmpty(message="No dejar en Blanco")
+    @CheckRut(message="Rut incorrecto!")
     private String rut;
     @Column(name="correo")
+    @Email(message="Correo Electronico no valido!")
     private String correo;
     
     public Usuario() {

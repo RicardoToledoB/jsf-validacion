@@ -1,9 +1,20 @@
 package com.proyecto.util;
-/**
- *
- * @author ricardotoledo
- */
-public class ValidaRut {
+
+import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+public class ValidaRut implements ConstraintValidator<CheckRut,String> {
+    
+    String rut;
+    @Override
+    public void initialize(CheckRut constraintAnnotation) {
+        rut=constraintAnnotation.toString();
+    }
+
+    @Override
+    public boolean isValid(String value, ConstraintValidatorContext context) {
+        return validarRut(value);
+    }
+    
     public static boolean validarRut(String rut) {
         boolean validacion = false;
         try {
