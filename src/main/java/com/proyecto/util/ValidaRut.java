@@ -1,5 +1,4 @@
 package com.proyecto.util;
-
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 public class ValidaRut implements ConstraintValidator<CheckRut,String> {

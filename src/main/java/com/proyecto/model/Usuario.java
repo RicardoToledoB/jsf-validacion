@@ -31,6 +31,8 @@ public class Usuario {
     @Email(message="Correo Electronico no valido!")
     private String correo;
     
+    @Column(name="dv")
+    private String dv;
     public Usuario() {
     }
 
@@ -47,6 +49,8 @@ public class Usuario {
     }
 
     public void setRut(String rut) {
+       
+        
         this.rut = rut;
     }
 
@@ -56,6 +60,16 @@ public class Usuario {
 
     public void setCorreo(String correo) {
         this.correo = correo;
+    }
+
+    public String getDv() {
+        
+        
+        return dv;
+    }
+
+    public void setDv(String dv) {
+        this.dv = dv;
     }
          
 }

@@ -15,9 +15,11 @@
                 <h:outputLabel value="CORREO"/>
                 <h:inputText  id="correo" value="#{usuarioBean.usuario.correo}"/>
                 <h:message for="correo"/>
-                
+
                 <h:commandButton value="Limpiar" />
-                <h:commandButton value="Guardar" />
+                <h:commandButton value="Guardar" action="#{usuarioBean.save()}" />
+                <h:message for="validate" ></h:message>
+
             </h:panelGrid>
 
         </h:form>
